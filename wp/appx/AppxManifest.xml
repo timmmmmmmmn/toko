@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Windows 10 Mobile-app (hosted web app): opent https://toko.timvanbergen.nl/, de winkel voor al onze Lumia-apps; installeert ze zelf via PackageManager.
+<!-- Windows 10 Mobile-app (hosted web app): opent https://toko.timvanbergen.nl/lumia/, de winkel voor al onze Lumia-apps; installeert ze zelf via PackageManager.
      Updates aan de site komen vanzelf in de app. Verhoog Version alleen bij een nieuw pakket (tegels, rechten);
      Toko ziet aan dit nummer dat er een update is. -->
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -7,7 +7,7 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
          IgnorableNamespaces="uap mp rescap">
-  <Identity Name="TimvanBergen.Toko" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="TimvanBergen.Toko" Publisher="CN=Tim van Bergen" Version="1.0.1.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="641be657-7379-4211-b961-7e3aa019666f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Toko</DisplayName>
@@ -21,7 +21,7 @@
     <Resource Language="nl-NL" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="https://toko.timvanbergen.nl/">
+    <Application Id="App" StartPage="https://toko.timvanbergen.nl/lumia/">
       <uap:VisualElements DisplayName="Toko" Description="De winkel voor al onze Lumia-apps." BackgroundColor="#E8590C"
                           Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Toko" />

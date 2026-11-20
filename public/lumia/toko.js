@@ -59,7 +59,7 @@
   function rij(app) {
     var li = el('li');
     var img = el('img', 'tegel');
-    img.src = '/img/' + app.id + '.png';
+    img.src = '/lumia/img/' + app.id + '.png';
     img.alt = '';
     img.style.background = app.kleur;
     var t = el('div', 'tekst');
@@ -119,7 +119,7 @@
 
   function toonDetail(app) {
     var s = stand(app);
-    $('dIcoon').src = '/img/' + app.id + '.png';
+    $('dIcoon').src = '/lumia/img/' + app.id + '.png';
     $('dIcoon').style.background = app.kleur;
     $('dNaam').textContent = app.naam;
     $('dSoort').textContent = app.soort;

@@ -2,74 +2,58 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F9FD" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1520" media="(prefers-color-scheme: dark)">
 <title>Toko</title>
-<meta name="description" content="Toko – de winkel voor alle Lumia-apps van Tim van Bergen.">
+<meta name="description" content="Toko – de winkel voor alle apps van Tim van Bergen.">
 <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/toko.css">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/app.css">
+<script src="/theme.js"></script>
+<script type="module" src="/app.js"></script>
 </head>
 <body>
-<div id="app">
-  <header class="kop">
-    <div class="merk">TOKO</div>
-    <nav class="pivot" id="pivot">
-      <button data-tab="apps" class="aan">apps</button>
-      <button data-tab="mijn">mijn apps</button>
-      <button data-tab="hulp">hulp</button>
-    </nav>
+<div class="app" id="app">
+  <header class="mast">
+    <h1 class="mast-title" id="title">Toko</h1>
+    <div class="row">
+      <span class="sync-dot busy" id="sync" title="Laden"></span>
+      <button class="icon-btn" id="refresh" type="button" aria-label="Vernieuwen"><span data-icon="refresh"></span></button>
+    </div>
   </header>
 
-  <main>
-    <section id="tab-apps" class="tab">
-      <ul class="lijst" id="lijst"><li class="laden">laden…</li></ul>
-    </section>
+  <div class="search-wrap" id="searchWrap">
+    <span data-icon="search"></span>
+    <input class="search" id="search" type="search" placeholder="Zoeken in Toko" autocomplete="off" aria-label="Zoeken">
+  </div>
+  <div class="chips" id="chips"></div>
 
-    <section id="tab-mijn" class="tab" hidden>
-      <ul class="lijst" id="mijn"></ul>
-      <button class="knop breed" id="allesBij" hidden>alles bijwerken</button>
-    </section>
+  <main class="list" id="list"></main>
 
-    <section id="tab-hulp" class="tab" hidden>
-      <h2>de eerste keer</h2>
-      <ol class="stappen">
-        <li><b>Ontwikkelaarsmodus aan.</b> Instellingen → Bijwerken en beveiliging → Voor ontwikkelaars → Ontwikkelaarsmodus.</li>
-        <li><b>Certificaat installeren.</b> Alle apps zijn ondertekend door Tim van Bergen. Tik hieronder op het certificaat en kies Installeren. Dit hoeft maar één keer.<br><a class="knop" href="/TimVanBergen.cer">certificaat downloaden</a></li>
-        <li><b>Toko installeren.</b> Daarna installeer en werk je alle andere apps bij vanuit Toko zelf.<br><a class="knop" href="/download/toko.appx">Toko downloaden</a></li>
-      </ol>
-      <h2>lukt installeren niet?</h2>
-      <p>Open de app in Toko en tik op <b>via browser</b>: de app wordt dan gedownload en de telefoon vraagt of je hem wilt installeren. Werkt ook dat niet, zet dan bij Voor ontwikkelaars <b>Apparaatportal</b> aan, open het adres dat de telefoon laat zien op je computer en installeer het .appx-bestand bij Apps.</p>
-      <h2>over</h2>
-      <p>Toko is de winkel voor alle apps die wij maken voor Windows 10 Mobile. Gemaakt door <a href="https://timvanbergen.nl/">Tim van Bergen</a>. De broncode staat op <a href="https://github.com/timmmmmmmmn/toko">GitHub</a>.</p>
-    </section>
-
-    <section id="detail" class="detail" hidden>
-      <button class="terug" id="terug" aria-label="Terug">‹</button>
-      <div class="d-kop">
-        <img class="tegel groot" id="dIcoon" alt="">
-        <div>
-          <h1 id="dNaam"></h1>
-          <div class="grijs">Tim van Bergen</div>
-          <div class="grijs" id="dSoort"></div>
-        </div>
-      </div>
-      <div class="acties">
-        <button class="knop vol" id="dHoofd"></button>
-        <button class="knop" id="dOpen" hidden>openen</button>
-      </div>
-      <div class="voortgang" id="dVoortgang" hidden><i id="dBalk"></i></div>
-      <div class="status" id="dStatus"></div>
-      <p id="dTekst"></p>
-      <dl class="info">
-        <dt>versie</dt><dd id="dVersie"></dd>
-        <dt>geïnstalleerd</dt><dd id="dHier"></dd>
-        <dt>website</dt><dd><a id="dSite" target="_blank" rel="noopener"></a></dd>
-      </dl>
-      <a class="klein" id="dBrowser" href="#">via browser installeren</a>
-    </section>
-  </main>
+  <nav class="nav" id="nav" aria-label="Navigatie">
+    <div class="nav-pill" id="navPill">
+      <span class="nav-ind" id="navInd" aria-hidden="true"></span>
+      <button type="button" data-nav="ontdek" aria-current="true"><span data-icon="compass"></span>Ontdek</button>
+      <button type="button" data-nav="apps"><span data-icon="grid"></span>Mijn apps</button>
+      <button type="button" data-nav="updates"><span data-icon="download"></span>Updates<b class="badge" id="badge" hidden></b></button>
+      <button type="button" data-nav="meer"><span data-icon="more"></span>Meer</button>
+    </div>
+    <button type="button" class="nav-add" id="navAdd" aria-label="Zoeken"><span data-icon="search"></span></button>
+  </nav>
 </div>
-<script src="/toko.js"></script>
+
+<div class="sheet-back" id="sheetBack" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-top">
+      <h2 id="sheetTitle"></h2>
+      <button class="icon-btn" id="sheetClose" type="button" aria-label="Sluiten"><span data-icon="close"></span></button>
+    </div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
 </body>
 </html>
