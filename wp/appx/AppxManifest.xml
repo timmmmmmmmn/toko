@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Windows 10 Mobile-app (hosted web app): opent https://toko.timvanbergen.nl/, de winkel voor al onze Lumia-apps; installeert ze zelf via PackageManager.
+     Updates aan de site komen vanzelf in de app. Verhoog Version alleen bij een nieuw pakket (tegels, rechten);
+     Toko ziet aan dit nummer dat er een update is. -->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap mp rescap">
+  <Identity Name="TimvanBergen.Toko" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="641be657-7379-4211-b961-7e3aa019666f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Toko</DisplayName>
+    <PublisherDisplayName>Tim van Bergen</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="nl-NL" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://toko.timvanbergen.nl/">
+      <uap:VisualElements DisplayName="Toko" Description="De winkel voor al onze Lumia-apps." BackgroundColor="#E8590C"
+                          Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Toko" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#E8590C" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://toko.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+      <Extensions>
+        <!-- zo kan Toko de app openen -->
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="tvb-toko">
+            <uap:DisplayName>Toko</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="packageManagement" />
+    <rescap:Capability Name="packageQuery" />
+  </Capabilities>
+</Package>
