@@ -17,6 +17,12 @@ export const APPS = [
     tekst: 'Berichten, foto’s en spraakberichten met je contactpersonen, end-to-end versleuteld. De eerste keer inloggen duurt op de Lumia een minuutje (het rekenwerk voor de versleuteling); daarna onthoudt hij je. Bellen werkt op de Lumia misschien niet.',
   },
   {
+    id: 'belliechat', naam: 'Belliechat', repo: 'toko', manifest: 'wp/spellen/belliechat/AppxManifest.xml', bestand: 'Belliechat.appx', pakket: 'TimvanBergen.Belliechat', protocol: 'tvb-belliechat',
+    kleur: '#000EB6', soort: 'Sociaal', site: 'https://belliechat.timvanbergen.nl/',
+    kort: 'Chatten, foto’s en video’s sturen.',
+    tekst: 'Stuur berichten, foto’s en video’s naar je vrienden. Meer niet. Gemaakt voor de Lumia, en werkt ook op Android en de iPhone.',
+  },
+  {
     id: 'agenda', naam: 'Agenda', repo: 'agenda', bestand: 'Agenda.appx', pakket: 'TimvanBergen.Agenda', protocol: 'tvb-agenda',
     kleur: '#242564', soort: 'Productiviteit', site: 'https://agenda.timvanbergen.nl/',
     kort: 'Je eigen agenda, overal gelijk.',

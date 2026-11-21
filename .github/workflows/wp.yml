@@ -27,7 +27,7 @@ jobs:
           $sdk = Get-ChildItem "${env:ProgramFiles(x86)}\Windows Kits\10\bin\10.*\x64" | Where-Object { Test-Path "$($_.FullName)\makeappx.exe" } | Sort-Object { [version]$_.Parent.Name } -Descending | Select-Object -First 1
           $pfx = "$env:RUNNER_TEMP\sign.pfx"
           [IO.File]::WriteAllBytes($pfx, [Convert]::FromBase64String($env:WP_PFX_BASE64))
-          $pakketten = @{ 'Toko' = 'wp\appx'; 'Galgje' = 'wp\spellen\galgje'; 'AgoraBosgevecht' = 'wp\spellen\agora'; 'ShaneDeadRedemption' = 'wp\spellen\shane' }
+          $pakketten = @{ 'Toko' = 'wp\appx'; 'Galgje' = 'wp\spellen\galgje'; 'AgoraBosgevecht' = 'wp\spellen\agora'; 'ShaneDeadRedemption' = 'wp\spellen\shane'; 'Belliechat' = 'wp\spellen\belliechat' }
           foreach ($p in $pakketten.GetEnumerator()) {
             & "$($sdk.FullName)\makeappx.exe" pack /o /d $p.Value /p "$($p.Key).appx"
             if ($LASTEXITCODE) { exit 1 }
@@ -49,4 +49,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete wp-latest --yes --cleanup-tag 2>$null
-          gh release create wp-latest Toko.appx Galgje.appx AgoraBosgevecht.appx ShaneDeadRedemption.appx wp\TimVanBergen.cer --title "Windows 10 Mobile-app" --notes "Voor Windows 10 Mobile (bijv. Lumia 435). Installeren: zet Ontwikkelaarsmodus aan, open TimVanBergen.cer en daarna Toko.appx." --latest=false
+          gh release create wp-latest Toko.appx Galgje.appx AgoraBosgevecht.appx ShaneDeadRedemption.appx Belliechat.appx wp\TimVanBergen.cer --title "Windows 10 Mobile-app" --notes "Voor Windows 10 Mobile (bijv. Lumia 435). Installeren: zet Ontwikkelaarsmodus aan, open TimVanBergen.cer en daarna Toko.appx." --latest=false

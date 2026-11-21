@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Belliechat voor Windows 10 Mobile (hosted web app): opent https://belliechat.timvanbergen.nl/ (de webapp is ES5 en draait zo in Edge 14).
+     WindowsRuntimeAccess="all": de app gebruikt de terugknop, de statusbalk en het toetsenbord (InputPane) van de telefoon.
+     Toko bouwt dit pakket (.github/workflows/wp.yml) en ziet aan Version dat er een update is; verhoog die alleen bij een nieuw pakket. -->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         IgnorableNamespaces="uap mp">
+  <Identity Name="TimvanBergen.Belliechat" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="0195f29f-4822-456a-9272-cc8f7439325f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Belliechat</DisplayName>
+    <PublisherDisplayName>Tim van Bergen</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="nl-NL" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://belliechat.timvanbergen.nl/">
+      <uap:VisualElements DisplayName="Belliechat" Description="Chatten, foto's en video's sturen." BackgroundColor="#000EB6"
+                          Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Belliechat" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#000EB6" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://belliechat.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+      <Extensions>
+        <!-- zo kan Toko de app openen -->
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="tvb-belliechat">
+            <uap:DisplayName>Belliechat</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
