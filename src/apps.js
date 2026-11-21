@@ -1,6 +1,8 @@
 // De catalogus van Toko: alle apps die we voor Windows 10 Mobile (Lumia) maken. Het versienummer komt live
 // uit wp/appx/AppxManifest.xml van elke repo; het pakket zelf uit de GitHub-release 'wp-latest'.
-// Een nieuwe app: hier toevoegen, icoon (150×150) in public/img/<id>.png, en de repo een wp/appx + wp.yml geven.
+// Een nieuwe app: hier toevoegen, icoon (150×150) in public/lumia/img/<id>.png, en de repo een wp/appx + wp.yml geven.
+// Games zonder eigen Lumia-pakket (een privérepo, of geen repo) bouwt Toko zelf: `manifest` wijst naar wp/spellen/<id>
+// in deze repo en het pakket staat in Toko's eigen release; de game zelf levert alleen /wp (wp/build.mjs in de game).
 export const APPS = [
   {
     id: 'jensrun', naam: 'Jens Run', repo: 'jensrun', bestand: 'JensRun.appx', pakket: 'TimvanBergen.JensRun', protocol: 'tvb-jensrun',
@@ -25,6 +27,24 @@ export const APPS = [
     kleur: '#A51D21', soort: 'Productiviteit', site: 'https://notities.timvanbergen.nl/',
     kort: 'Notities en lijstjes op al je apparaten.',
     tekst: 'Schrijf notities, maak boodschappenlijstjes en zet herinneringen. Alles wordt bewaard en staat ook op je andere apparaten.',
+  },
+  {
+    id: 'shane', naam: 'Shane Dead Redemption', repo: 'toko', manifest: 'wp/spellen/shane/AppxManifest.xml', bestand: 'ShaneDeadRedemption.appx', pakket: 'TimvanBergen.ShaneDeadRedemption', protocol: 'tvb-shane',
+    kleur: '#5a3418', soort: 'Spellen', site: 'https://shanedeadredemption.timvanbergen.nl/',
+    kort: 'Western: vlucht naar de grens bij Kleef.',
+    tekst: 'Shane steelt twee frikandelbroodjes bij de Plus in Hatert en vlucht naar de grens bij Kleef: twintig hoofdstukken met duels, Dead Eye en bazen. Links een stick om te lopen, rechts vegen om te kijken. Op de Lumia zonder schaduwen en op lagere resolutie; het is een zwaar spel voor deze telefoon.',
+  },
+  {
+    id: 'agora', naam: 'Agora Bosgevecht', repo: 'toko', manifest: 'wp/spellen/agora/AppxManifest.xml', bestand: 'AgoraBosgevecht.appx', pakket: 'TimvanBergen.AgoraBosgevecht', protocol: 'tvb-agora',
+    kleur: '#2f5d2a', soort: 'Spellen', site: 'https://agorabosgevecht.timvanbergen.nl/',
+    kort: 'Vechtspel met de vrienden van school.',
+    tekst: 'Een vechtspel met negen personages, ieder met eigen wapens en een special, in Nijmegen of op het schoolplein. Speel tegen de computer of online tegen iemand anders. Met een stick en drie knoppen op het scherm.',
+  },
+  {
+    id: 'galgje', naam: 'Galgje', repo: 'toko', manifest: 'wp/spellen/galgje/AppxManifest.xml', bestand: 'Galgje.appx', pakket: 'TimvanBergen.Galgje', protocol: 'tvb-galgje',
+    kleur: '#3d3d3d', soort: 'Spellen', site: 'https://galgje.timvanbergen.nl/',
+    kort: 'Het klassieke woordspel.',
+    tekst: 'Galgje met tien pogingen: raad het woord letter voor letter voordat het poppetje hangt.',
   },
   {
     id: 'toko', naam: 'Toko', repo: 'toko', bestand: 'Toko.appx', pakket: 'TimvanBergen.Toko', protocol: 'tvb-toko',
@@ -98,7 +118,7 @@ export const ANDROID = [
 // Spellen en apps die alleen in de browser draaien: Toko opent ze.
 export const WEB = [
   { id: 'rotterdam', naam: 'Grote Aanslag Op. Rotterdam', url: 'https://rotterdam.timvanbergen.nl/', kleur: '#1b1b1b', soort: 'Spellen', kort: 'Open wereld door Rotterdam.', tekst: 'Een open-wereldspel door Rotterdam: de Erasmusbrug, de Kuip, de haven en de Markthal, met missies, auto’s, de tram en een radio. Op een computer met toetsenbord.', beeld: 'rotterdam.jpg' },
-  { id: 'shane', naam: 'Shane Dead Redemption', url: 'https://shanedeadredemption.timvanbergen.nl/', kleur: '#5a3418', soort: 'Spellen', kort: 'Western: vlucht naar de grens bij Kleef.', tekst: 'Een western in twintig levels: Shane steelt twee frikandelbroodjes bij de Plus in Hatert en vlucht naar de grens bij Kleef, met duels, Dead Eye en bazen. Op een computer.', beeld: null },
-  { id: 'agora', naam: 'Agora Bosgevecht', url: 'https://agorabosgevecht.timvanbergen.nl/', kleur: '#2f5d2a', soort: 'Spellen', kort: 'Vechtspel met de vrienden van school.', tekst: 'Een vechtspel met negen personages, ieder met eigen wapens en een special, in Nijmegen of op het schoolplein. Online tegen elkaar.', beeld: null },
+  { id: 'shane', naam: 'Shane Dead Redemption', url: 'https://shanedeadredemption.timvanbergen.nl/', kleur: '#5a3418', soort: 'Spellen', kort: 'Western: vlucht naar de grens bij Kleef.', tekst: 'Een western in twintig levels: Shane steelt twee frikandelbroodjes bij de Plus in Hatert en vlucht naar de grens bij Kleef, met duels, Dead Eye en bazen. Op een computer, of op je telefoon met knoppen op het scherm.', beeld: null },
+  { id: 'agora', naam: 'Agora Bosgevecht', url: 'https://agorabosgevecht.timvanbergen.nl/', kleur: '#2f5d2a', soort: 'Spellen', kort: 'Vechtspel met de vrienden van school.', tekst: 'Een vechtspel met negen personages, ieder met eigen wapens en een special, in Nijmegen of op het schoolplein. Online tegen elkaar, ook op je telefoon.', beeld: null },
   { id: 'galgje', naam: 'Galgje', url: 'https://galgje.timvanbergen.nl/', kleur: '#3d3d3d', soort: 'Spellen', kort: 'Het klassieke woordspel.', tekst: 'Galgje met tien pogingen, met het toetsenbord op het scherm of je eigen toetsenbord.', beeld: null },
 ];

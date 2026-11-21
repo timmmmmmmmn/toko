@@ -55,14 +55,14 @@ async function android() {
 // ---------- Lumia ----------
 
 async function versie(app) {
-  const t = await tekst(`${RAW}/${app.repo}/main/wp/appx/AppxManifest.xml`, 120);
+  const t = await tekst(`${RAW}/${app.repo}/main/${app.manifest || 'wp/appx/AppxManifest.xml'}`, 120);
   const m = t && t.match(/<Identity[^>]*\sVersion="([\d.]+)"/);
   return m ? m[1] : null;
 }
 
 async function catalogus() {
   const versies = await Promise.all(APPS.map(versie));
-  return APPS.map(({ repo, bestand, ...app }, i) => ({ ...app, versie: versies[i], download: `/download/${app.id}.appx` }));
+  return APPS.map(({ repo, bestand, manifest, ...app }, i) => ({ ...app, versie: versies[i], download: `/download/${app.id}.appx` }));
 }
 
 async function download(app, request) {
