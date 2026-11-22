@@ -17,10 +17,10 @@ export const APPS = [
     tekst: 'Berichten, foto’s en spraakberichten met je contactpersonen, end-to-end versleuteld. De eerste keer inloggen duurt op de Lumia een minuutje (het rekenwerk voor de versleuteling); daarna onthoudt hij je. Bellen werkt op de Lumia misschien niet.',
   },
   {
-    id: 'belliechat', naam: 'Belliechat', repo: 'toko', manifest: 'wp/spellen/belliechat/AppxManifest.xml', bestand: 'Belliechat.appx', pakket: 'TimvanBergen.Belliechat', protocol: 'tvb-belliechat',
-    kleur: '#000EB6', soort: 'Sociaal', site: 'https://belliechat.timvanbergen.nl/',
+    id: 'skittalite', naam: 'Skitta Lite', repo: 'toko', manifest: 'wp/spellen/skittalite/AppxManifest.xml', bestand: 'SkittaLite.appx', pakket: 'TimvanBergen.Belliechat', protocol: 'tvb-skittalite',
+    kleur: '#000EB6', soort: 'Sociaal', site: 'https://skittalite.timvanbergen.nl/',
     kort: 'Chatten, foto’s en video’s sturen.',
-    tekst: 'Stuur berichten, foto’s en video’s naar je vrienden. Meer niet. Gemaakt voor de Lumia, en werkt ook op Android en de iPhone.',
+    tekst: 'De lichte versie van Skitta, gemaakt voor de Lumia. Stuur berichten, foto’s en video’s naar andere Skitta Lite-gebruikers én naar mensen op Skitta. Inloggen gaat meteen; chats met Skitta Lite zijn niet end-to-end versleuteld en bellen kan niet.',
   },
   {
     id: 'agenda', naam: 'Agenda', repo: 'agenda', bestand: 'Agenda.appx', pakket: 'TimvanBergen.Agenda', protocol: 'tvb-agenda',
