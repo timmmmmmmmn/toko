@@ -53,6 +53,30 @@ export const APPS = [
     tekst: 'Galgje met tien pogingen: raad het woord letter voor letter voordat het poppetje hangt.',
   },
   {
+    id: 'scorroday', naam: 'Scorroday', repo: 'toko', manifest: 'wp/spellen/scorroday/AppxManifest.xml', bestand: 'Scorroday.appx', pakket: 'TimvanBergen.Scorroday', protocol: 'tvb-scorroday',
+    kleur: '#2d3a8c', soort: 'Onderwijs', site: 'https://scorroday.timvanbergen.nl/',
+    kort: 'Je SOMtoday-rooster, licht en snel.',
+    tekst: 'Je rooster uit SOMtoday, per dag en per week, met uitgevallen lessen en lokaalwijzigingen. Je logt in via SOMtoday zelf: kies je school en log in met je schoolaccount, Microsoft of Entree. Het rooster blijft bewaard, dus je ziet het ook zonder internet.',
+  },
+  {
+    id: 'navikarta', naam: 'Navi Karta', repo: 'toko', manifest: 'wp/spellen/navikarta/AppxManifest.xml', bestand: 'NaviKarta.appx', pakket: 'TimvanBergen.NaviKarta', protocol: 'tvb-navikarta',
+    kleur: '#10316b', soort: 'Reizen', site: 'https://navikarta.timvanbergen.nl/',
+    kort: 'Kaarten en routes, licht genoeg voor je Lumia.',
+    tekst: 'Een kaart van de hele wereld met zoeken, je eigen locatie en routes met de auto, de fiets of lopend, met aanwijzingen onderweg. Lang drukken op de kaart laat zien wat er ligt. Kies Licht als kaartsoort voor de snelste kaart. Kaarten van OpenStreetMap.',
+  },
+  {
+    id: 'boodschappen', naam: 'Ron Jans’ Boodschappenlijst', repo: 'toko', manifest: 'wp/spellen/boodschappen/AppxManifest.xml', bestand: 'Boodschappenlijst.appx', pakket: 'TimvanBergen.Boodschappenlijst', protocol: 'tvb-boodschappen',
+    kleur: '#2e6b34', soort: 'Productiviteit', site: 'https://boodschappen.timvanbergen.nl/',
+    kort: 'Je boodschappen met prijzen en het totaal.',
+    tekst: 'Een echt boodschappenlijstje: schrijf op wat je nodig hebt met de prijs erbij en zie meteen het totaal. Streep af wat in je mandje ligt. De lijst blijft op je telefoon staan, ook zonder internet.',
+  },
+  {
+    id: 'muzu', naam: 'Muzu', repo: 'toko', manifest: 'wp/spellen/muzu/AppxManifest.xml', bestand: 'Muzu.appx', pakket: 'TimvanBergen.Muzu', protocol: 'tvb-muzu',
+    kleur: '#15121c', soort: 'Muziek', site: 'https://muzu.timvanbergen.nl/',
+    kort: 'Je muziek op je telefoon.',
+    tekst: 'Een mp3-speler die ook de muziek speelt die al op je telefoon staat. Nieuwe liedjes zet je op je computer klaar op muzu.timvanbergen.nl met de code uit de app: Muzu haalt ze op en zet ze in Muziek › Muzu. De site is alleen een brug; daar blijft niets staan. Speelt door als je scherm uit is.',
+  },
+  {
     id: 'toko', naam: 'Toko', repo: 'toko', bestand: 'Toko.appx', pakket: 'TimvanBergen.Toko', protocol: 'tvb-toko',
     kleur: '#E8590C', soort: 'Hulpmiddelen', site: 'https://toko.timvanbergen.nl/',
     kort: 'De winkel voor al onze Lumia-apps.',
