@@ -17,6 +17,7 @@
         </intent>
         <package android:name="nl.timvanbergen.agenda" />
         <package android:name="nl.timvanbergen.notities" />
+        <package android:name="nl.timvanbergen.cijfernu" />
         <package android:name="nl.timvanbergen.skitta" />
         <package android:name="nl.timvanbergen.spokoe" />
         <package android:name="nl.timvanbergen.iptimtv.mobile" />

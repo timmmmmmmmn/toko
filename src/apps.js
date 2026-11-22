@@ -120,6 +120,13 @@ export const ANDROID = [
     beeld: 'notities.jpg',
   },
   {
+    id: 'cijfernu', naam: 'CijferNu', repo: 'cijfernu', tag: /^v(\d+\.\d+\.\d+)$/, apk: 'CijferNu.apk', pakket: 'nl.timvanbergen.cijfernu',
+    kleur: '#1200A2', soort: 'Onderwijs', site: 'https://cijfernu.timvanbergen.nl/', bron: 'https://github.com/timmmmmmmmn/cijfernu',
+    kort: 'SOMtoday, maar dan fijn.',
+    tekst: 'Je cijfers, rooster en berichten van SOMtoday in één snelle app, met meldingen zodra er een cijfer binnen is of een les uitvalt. Plus een eigen planner voor huiswerk en toetsen, met een herinnering de avond ervoor. Je logt in bij SOMtoday zelf.',
+    beeld: 'cijfernu.jpg',
+  },
+  {
     id: 'skitta', naam: 'Skitta', repo: 'skitta', tag: /^android-v(\d+\.\d+\.\d+)$/, apk: 'Skitta-{v}.apk', pakket: 'nl.timvanbergen.skitta',
     kleur: '#00aff0', soort: 'Sociaal', site: 'https://skitta.timvanbergen.nl/', bron: 'https://github.com/timmmmmmmmn/skitta',
     kort: 'Chatten en bellen met je vrienden.',

@@ -43,7 +43,7 @@ function fillIcons(root = document) {
   $$('[data-icon]', root).forEach((el) => { el.outerHTML = icon(el.dataset.icon); });
 }
 
-const SOORTEN = ['Spellen', 'Productiviteit', 'Sociaal', 'Muziek en tv', 'Hulpmiddelen'];
+const SOORTEN = ['Spellen', 'Productiviteit', 'Onderwijs', 'Sociaal', 'Muziek en tv', 'Hulpmiddelen'];
 const state = { apps: [], web: [], hier: {}, tab: 'ontdek', soort: '', zoek: '', bezig: {}, open: null, geladen: false };
 
 // ---------- Kleine hulpjes ----------
