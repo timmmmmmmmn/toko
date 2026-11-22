@@ -9,7 +9,7 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
          IgnorableNamespaces="uap mp uap3">
-  <Identity Name="TimvanBergen.Muzu" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="TimvanBergen.Muzu" Publisher="CN=Tim van Bergen" Version="1.0.1.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="3c490f9b-acd8-4488-bc88-c1114229ce41" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Muzu</DisplayName>
@@ -24,10 +24,10 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="https://muzu.timvanbergen.nl/app/">
-      <uap:VisualElements DisplayName="Muzu" Description="Je muziek op je telefoon; nieuwe liedjes zet je klaar via muzu.timvanbergen.nl." BackgroundColor="#15121c"
+      <uap:VisualElements DisplayName="Muzu" Description="Je muziek op je telefoon; nieuwe liedjes zet je klaar via muzu.timvanbergen.nl." BackgroundColor="#3a3f47"
                           Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Muzu" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#15121c" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#3a3f47" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait" />
         </uap:InitialRotationPreference>

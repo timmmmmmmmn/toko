@@ -54,7 +54,7 @@ export const APPS = [
   },
   {
     id: 'scorroday', naam: 'Scorroday', repo: 'toko', manifest: 'wp/spellen/scorroday/AppxManifest.xml', bestand: 'Scorroday.appx', pakket: 'TimvanBergen.Scorroday', protocol: 'tvb-scorroday',
-    kleur: '#2d3a8c', soort: 'Onderwijs', site: 'https://scorroday.timvanbergen.nl/',
+    kleur: '#25C5FF', soort: 'Onderwijs', site: 'https://scorroday.timvanbergen.nl/',
     kort: 'Je SOMtoday-rooster, licht en snel.',
     tekst: 'Je rooster uit SOMtoday, per dag en per week, met uitgevallen lessen en lokaalwijzigingen. Je logt in via SOMtoday zelf: kies je school en log in met je schoolaccount, Microsoft of Entree. Het rooster blijft bewaard, dus je ziet het ook zonder internet.',
   },
@@ -66,13 +66,13 @@ export const APPS = [
   },
   {
     id: 'boodschappen', naam: 'Ron Jans’ Boodschappenlijst', repo: 'toko', manifest: 'wp/spellen/boodschappen/AppxManifest.xml', bestand: 'Boodschappenlijst.appx', pakket: 'TimvanBergen.Boodschappenlijst', protocol: 'tvb-boodschappen',
-    kleur: '#2e6b34', soort: 'Productiviteit', site: 'https://boodschappen.timvanbergen.nl/',
+    kleur: '#1a1a1a', soort: 'Productiviteit', site: 'https://boodschappen.timvanbergen.nl/',
     kort: 'Je boodschappen met prijzen en het totaal.',
     tekst: 'Een echt boodschappenlijstje: schrijf op wat je nodig hebt met de prijs erbij en zie meteen het totaal. Streep af wat in je mandje ligt. De lijst blijft op je telefoon staan, ook zonder internet.',
   },
   {
     id: 'muzu', naam: 'Muzu', repo: 'toko', manifest: 'wp/spellen/muzu/AppxManifest.xml', bestand: 'Muzu.appx', pakket: 'TimvanBergen.Muzu', protocol: 'tvb-muzu',
-    kleur: '#15121c', soort: 'Muziek', site: 'https://muzu.timvanbergen.nl/',
+    kleur: '#3a3f47', soort: 'Muziek', site: 'https://muzu.timvanbergen.nl/',
     kort: 'Je muziek op je telefoon.',
     tekst: 'Een mp3-speler die ook de muziek speelt die al op je telefoon staat. Nieuwe liedjes zet je op je computer klaar op muzu.timvanbergen.nl met de code uit de app: Muzu haalt ze op en zet ze in Muziek › Muzu. De site is alleen een brug; daar blijft niets staan. Speelt door als je scherm uit is.',
   },

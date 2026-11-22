@@ -7,7 +7,7 @@
          xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          IgnorableNamespaces="uap mp">
-  <Identity Name="TimvanBergen.Boodschappenlijst" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="TimvanBergen.Boodschappenlijst" Publisher="CN=Tim van Bergen" Version="1.0.1.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="02666e8a-fadf-4f51-a2f0-6a73f5e6126c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Ron Jans' Boodschappenlijst</DisplayName>
@@ -22,10 +22,10 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="https://boodschappen.timvanbergen.nl/">
-      <uap:VisualElements DisplayName="Ron Jans' Boodschappenlijst" Description="Een boodschappenlijstje met prijzen en het totaal." BackgroundColor="#2e6b34"
+      <uap:VisualElements DisplayName="Ron Jans' Boodschappenlijst" Description="Een boodschappenlijstje met prijzen en het totaal." BackgroundColor="#1a1a1a"
                           Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Boodschappen" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#2e6b34" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#1a1a1a" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait" />
         </uap:InitialRotationPreference>
