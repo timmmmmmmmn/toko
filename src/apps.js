@@ -77,6 +77,24 @@ export const APPS = [
     tekst: 'Een mp3-speler die ook de muziek speelt die al op je telefoon staat. Nieuwe liedjes zet je op je computer klaar op muzu.timvanbergen.nl met de code uit de app: Muzu haalt ze op en zet ze in Muziek › Muzu. De site is alleen een brug; daar blijft niets staan. Speelt door als je scherm uit is.',
   },
   {
+    id: 'jensrunlite', naam: 'Jens Run Lite', repo: 'toko', manifest: 'wp/spellen/jensrunlite/AppxManifest.xml', bestand: 'JensRunLite.appx', pakket: 'TimvanBergen.JensRunLite', protocol: 'tvb-jensrunlite',
+    kleur: '#000000', soort: 'Spellen', site: 'https://jensrunlite.timvanbergen.nl/',
+    kort: 'Jens Run in 2D, kei snel op je Lumia.',
+    tekst: 'De Rennen-modus van Jens Run, maar dan in 2D zodat hij op de Lumia supersnel loopt. Er is telefoonverbod en Shane wil Jens z’n telefoon afpakken: spring over hekken en auto’s, buk onder duiven en spandoeken en pak de bekers. Tik om te springen (twee keer voor hoger), veeg omlaag om te bukken.',
+  },
+  {
+    id: 'angrymo', naam: 'Angry Mo', repo: 'toko', manifest: 'wp/spellen/angrymo/AppxManifest.xml', bestand: 'AngryMo.appx', pakket: 'TimvanBergen.AngryMo', protocol: 'tvb-angrymo',
+    kleur: '#1a1446', soort: 'Spellen', site: 'https://angrymo.timvanbergen.nl/',
+    kort: 'Schiet vuurwerk op boze kliko’s.',
+    tekst: 'Oudejaarsavond: Mo schiet vuurwerk op torens van hout, steen en glas vol boze kliko’s. Trek terug, mik en laat los. Een cobra ontploft als je tikt, een duizendklapper splitst in drieën. Acht levels, haal overal drie sterren.',
+  },
+  {
+    id: 'wierie', naam: 'Wierie', repo: 'toko', manifest: 'wp/spellen/wierie/AppxManifest.xml', bestand: 'Wierie.appx', pakket: 'TimvanBergen.Wierie', protocol: 'tvb-wierie',
+    kleur: '#ff6a3d', soort: 'Weer', site: 'https://wierie.timvanbergen.nl/',
+    kort: 'Het weer, maar dan in straattaal.',
+    tekst: 'Ewa mattie! Het weer van nu, per uur en de hele week, waar je ook bent, en Wierie vertelt het je in straattaal: kapot koud, lit buiten of natte pattas. Met tips of je een jas of paraplu mee moet. Weer van Open-Meteo.',
+  },
+  {
     id: 'toko', naam: 'Toko', repo: 'toko', bestand: 'Toko.appx', pakket: 'TimvanBergen.Toko', protocol: 'tvb-toko',
     kleur: '#E8590C', soort: 'Hulpmiddelen', site: 'https://toko.timvanbergen.nl/',
     kort: 'De winkel voor al onze Lumia-apps.',

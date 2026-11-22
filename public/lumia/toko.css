@@ -1,6 +1,6 @@
 /* Toko: plat en zwart zoals Windows Phone, met oranje als accent. Geen CSS-variabelen (EdgeHTML 13). */
 html, body { margin: 0; padding: 0; background: #000; color: #fff; }
-body { font-family: 'Segoe UI', 'Segoe WP', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; line-height: 1.4; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { font-family: 'Segoe UI', 'Segoe WP', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; line-height: 1.4; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 * { box-sizing: border-box; }
 a { color: #ff8a3d; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
@@ -9,13 +9,13 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 #app { max-width: 640px; margin: 0 auto; padding: 18px 16px 40px; }
 
 .kop { margin-bottom: 10px; }
-.merk { font-size: 14px; font-weight: 600; letter-spacing: .12em; }
+.merk { font-size: 12px; font-weight: 600; letter-spacing: .12em; }
 .pivot { white-space: nowrap; overflow-x: auto; overflow-y: hidden; margin: 2px 0 0 -2px; -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .pivot::-webkit-scrollbar { display: none; }
-.pivot button { font-size: 44px; font-weight: 300; line-height: 1.2; color: #555; margin-right: 18px; letter-spacing: -.02em; }
+.pivot button { font-size: 39px; font-weight: 300; line-height: 1.2; color: #555; margin-right: 18px; letter-spacing: -.02em; }
 .pivot button.aan { color: #fff; }
 
-h2 { font-size: 24px; font-weight: 300; margin: 22px 0 8px; color: #E8590C; }
+h2 { font-size: 21px; font-weight: 300; margin: 22px 0 8px; color: #E8590C; }
 p { color: #ccc; }
 
 .lijst { list-style: none; margin: 0; padding: 0; }
@@ -25,12 +25,12 @@ p { color: #ccc; }
 .tegel { width: 64px; height: 64px; display: block; -ms-flex-negative: 0; flex-shrink: 0; margin-right: 14px; background: #333; }
 .tegel.groot { width: 120px; height: 120px; margin-right: 18px; }
 .lijst .tekst { -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; }
-.lijst .naam { font-size: 22px; font-weight: 400; line-height: 1.15; }
-.lijst .sub { font-size: 14px; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lijst .label { font-size: 13px; color: #E8590C; margin-top: 2px; }
+.lijst .naam { font-size: 19px; font-weight: 400; line-height: 1.15; }
+.lijst .sub { font-size: 12px; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lijst .label { font-size: 11px; color: #E8590C; margin-top: 2px; }
 .lijst .label.ok { color: #999; }
 
-.knop { display: inline-block; border: 2px solid #fff; padding: 6px 18px 8px; font-size: 16px; font-weight: 600; text-decoration: none; color: #fff; margin: 10px 10px 0 0; min-width: 120px; text-align: center; }
+.knop { display: inline-block; border: 2px solid #fff; padding: 6px 18px 8px; font-size: 14px; font-weight: 600; text-decoration: none; color: #fff; margin: 10px 10px 0 0; min-width: 120px; text-align: center; }
 .knop:active { background: #fff; color: #000; }
 .knop.vol { background: #E8590C; border-color: #E8590C; }
 .knop.vol:active { background: #fff; border-color: #fff; color: #000; }
@@ -42,22 +42,22 @@ p { color: #ccc; }
 .stappen b, p b { color: #fff; font-weight: 600; }
 
 .detail { position: relative; }
-.terug { font-size: 40px; line-height: 1; margin: -8px 0 8px -4px; width: 44px; height: 44px; text-align: left; }
+.terug { font-size: 35px; line-height: 1; margin: -8px 0 8px -4px; width: 44px; height: 44px; text-align: left; }
 .d-kop { display: -ms-flexbox; display: flex; -ms-flex-align: end; align-items: flex-end; }
-.d-kop h1 { font-size: 34px; font-weight: 300; margin: 0 0 4px; line-height: 1.1; }
-.grijs { color: #999; font-size: 14px; }
+.d-kop h1 { font-size: 30px; font-weight: 300; margin: 0 0 4px; line-height: 1.1; }
+.grijs { color: #999; font-size: 12px; }
 .acties { margin-top: 6px; }
 .voortgang { height: 4px; background: #333; margin: 16px 0 0; overflow: hidden; }
 .voortgang i { display: block; height: 100%; width: 0; background: #E8590C; -webkit-transition: width .2s; transition: width .2s; }
 .voortgang.bezig i { width: 30% !important; -webkit-animation: heen 1.2s linear infinite; animation: heen 1.2s linear infinite; }
 @-webkit-keyframes heen { from { -webkit-transform: translateX(-100%); } to { -webkit-transform: translateX(340%); } }
 @keyframes heen { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
-.status { color: #ff8a3d; font-size: 14px; min-height: 20px; margin-top: 8px; }
+.status { color: #ff8a3d; font-size: 12px; min-height: 20px; margin-top: 8px; }
 .status.fout { color: #ff5c5c; }
-.info { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 18px 0; font-size: 14px; }
+.info { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 18px 0; font-size: 12px; }
 .info dt { width: 40%; color: #999; margin: 0 0 6px; }
 .info dd { width: 60%; margin: 0 0 6px; word-wrap: break-word; }
-.klein { font-size: 14px; color: #999; }
+.klein { font-size: 12px; color: #999; }
 
 @media (min-width: 700px) {
   #app { padding-top: 40px; }

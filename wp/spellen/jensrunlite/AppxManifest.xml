@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Jens Run Lite voor Windows 10 Mobile (hosted web app): opent https://jensrunlite.timvanbergen.nl/ (~/jensrunlite, ES5, 2D-canvas).
+     WindowsRuntimeAccess="all": terugknop, statusbalk en volledig scherm.
+     Toko bouwt dit pakket (.github/workflows/wp.yml) en ziet aan Version dat er een update is; verhoog die alleen bij een nieuw pakket. -->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         IgnorableNamespaces="uap mp">
+  <Identity Name="TimvanBergen.JensRunLite" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="4a1a0490-5c74-4f60-9ad6-a4ea4438efea" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Jens Run Lite</DisplayName>
+    <PublisherDisplayName>Tim van Bergen</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="nl-NL" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://jensrunlite.timvanbergen.nl/">
+      <uap:VisualElements DisplayName="Jens Run Lite" Description="Jens Run in 2D: alleen rennen, lekker snel." BackgroundColor="#000000"
+                          Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Jens Run Lite" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#000000" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://jensrunlite.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+      <Extensions>
+        <!-- zo kan Toko de app openen -->
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="tvb-jensrunlite">
+            <uap:DisplayName>Jens Run Lite</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
