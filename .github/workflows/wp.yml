@@ -50,3 +50,5 @@ jobs:
         run: |
           gh release delete wp-latest --yes --cleanup-tag 2>$null
           gh release create wp-latest Toko.appx Galgje.appx AgoraBosgevecht.appx ShaneDeadRedemption.appx SkittaLite.appx Scorroday.appx NaviKarta.appx Boodschappenlijst.appx Muzu.appx wp\TimVanBergen.cer --title "Windows 10 Mobile-app" --notes "Voor Windows 10 Mobile (bijv. Lumia 435). Installeren: zet Ontwikkelaarsmodus aan, open TimVanBergen.cer en daarna Toko.appx." --latest=false
+          # GitHub maakt er soms een concept zonder tag van als de oude tag net weg is: dan geven alle downloads 404
+          gh release edit wp-latest --draft=false --tag wp-latest
