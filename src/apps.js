@@ -83,16 +83,22 @@ export const APPS = [
     tekst: 'De Rennen-modus van Jens Run, maar dan in 2D zodat hij op de Lumia supersnel loopt. Er is telefoonverbod en Shane wil Jens z’n telefoon afpakken: spring over hekken en auto’s, buk onder duiven en spandoeken en pak de bekers. Tik om te springen (twee keer voor hoger), veeg omlaag om te bukken.',
   },
   {
+    id: 'puchmaxi', naam: 'Puch Maxi Loesoe', repo: 'toko', manifest: 'wp/spellen/puchmaxi/AppxManifest.xml', bestand: 'PuchMaxiLoesoe.appx', pakket: 'TimvanBergen.PuchMaxiLoesoe', protocol: 'tvb-puchmaxi',
+    kleur: '#ff0000', soort: 'Spellen', site: 'https://puchmaxi.timvanbergen.nl/',
+    kort: 'Jens op z’n Puch Maxi door Nijmegen.',
+    tekst: 'Jens scheurt op z’n Puch Maxi door Nijmegen. Veeg naar links of rechts om van baan te wisselen en sla op tijd af bij elk kruispunt, anders sta je in iemands voortuin. Veeg omhoog om over drempels, paaltjes en hekken te springen en pak de bekers. Raak je iets, dan zit de BOA achter je aan.',
+  },
+  {
     id: 'angrymo', naam: 'Angry Mo', repo: 'toko', manifest: 'wp/spellen/angrymo/AppxManifest.xml', bestand: 'AngryMo.appx', pakket: 'TimvanBergen.AngryMo', protocol: 'tvb-angrymo',
     kleur: '#1a1446', soort: 'Spellen', site: 'https://angrymo.timvanbergen.nl/',
     kort: 'Schiet vuurwerk op boze kliko’s.',
     tekst: 'Oudejaarsavond: Mo schiet vuurwerk op torens van hout, steen en glas vol boze kliko’s. Trek terug, mik en laat los. Een cobra ontploft als je tikt, een duizendklapper splitst in drieën. Acht levels, haal overal drie sterren.',
   },
   {
-    id: 'wierie', naam: 'Wierie', repo: 'toko', manifest: 'wp/spellen/wierie/AppxManifest.xml', bestand: 'Wierie.appx', pakket: 'TimvanBergen.Wierie', protocol: 'tvb-wierie',
-    kleur: '#ff6a3d', soort: 'Weer', site: 'https://wierie.timvanbergen.nl/',
+    id: 'woesoe', naam: 'Woesoe', repo: 'toko', manifest: 'wp/spellen/woesoe/AppxManifest.xml', bestand: 'Woesoe.appx', pakket: 'TimvanBergen.Wierie', protocol: 'tvb-woesoe',
+    kleur: '#9fb4c8', soort: 'Weer', site: 'https://woesoe.timvanbergen.nl/',
     kort: 'Het weer, maar dan in straattaal.',
-    tekst: 'Ewa mattie! Het weer van nu, per uur en de hele week, waar je ook bent, en Wierie vertelt het je in straattaal: kapot koud, lit buiten of natte pattas. Met tips of je een jas of paraplu mee moet. Weer van Open-Meteo.',
+    tekst: 'Ewa mattie! Het weer van nu, per uur en de hele week, waar je ook bent, en Woesoe vertelt het je in straattaal: kapot koud, lit buiten of natte pattas. Met tips of je een jas of paraplu mee moet. Weer van Open-Meteo.',
   },
   {
     id: 'toko', naam: 'Toko', repo: 'toko', bestand: 'Toko.appx', pakket: 'TimvanBergen.Toko', protocol: 'tvb-toko',

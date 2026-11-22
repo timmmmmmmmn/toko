@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Wierie voor Windows 10 Mobile (hosted web app): opent https://wierie.timvanbergen.nl/ (~/wierie, ES5).
-     location: het weer waar je bent.
+<!-- Puch Maxi Loesoe voor Windows 10 Mobile (hosted web app): opent https://puchmaxi.timvanbergen.nl/ (~/puchmaxi, ES5, nep-3D op een klein canvas).
      WindowsRuntimeAccess="all": terugknop, statusbalk en volledig scherm.
      Toko bouwt dit pakket (.github/workflows/wp.yml) en ziet aan Version dat er een update is; verhoog die alleen bij een nieuw pakket. -->
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
          xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          IgnorableNamespaces="uap mp">
-  <Identity Name="TimvanBergen.Wierie" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
-  <mp:PhoneIdentity PhoneProductId="8595c57c-f6bf-49a7-babb-f78ac78b3649" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="TimvanBergen.PuchMaxiLoesoe" Publisher="CN=Tim van Bergen" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="11a7a028-97f7-42fd-8fd0-3aaa6d98de22" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Wierie</DisplayName>
+    <DisplayName>Puch Maxi Loesoe</DisplayName>
     <PublisherDisplayName>Tim van Bergen</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -21,23 +20,23 @@
     <Resource Language="nl-NL" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="https://wierie.timvanbergen.nl/">
-      <uap:VisualElements DisplayName="Wierie" Description="Het weer, maar dan in straattaal." BackgroundColor="#ff6a3d"
+    <Application Id="App" StartPage="https://puchmaxi.timvanbergen.nl/">
+      <uap:VisualElements DisplayName="Puch Maxi Loesoe" Description="Jens op z'n Puch Maxi door Nijmegen." BackgroundColor="#ff0000"
                           Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Wierie" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#ff6a3d" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Puch Maxi" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#ff0000" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
       <uap:ApplicationContentUriRules>
-        <uap:Rule Match="https://wierie.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://puchmaxi.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <Extensions>
         <!-- zo kan Toko de app openen -->
         <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="tvb-wierie">
-            <uap:DisplayName>Wierie</uap:DisplayName>
+          <uap:Protocol Name="tvb-puchmaxi">
+            <uap:DisplayName>Puch Maxi Loesoe</uap:DisplayName>
           </uap:Protocol>
         </uap:Extension>
       </Extensions>
@@ -45,6 +44,5 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
-    <DeviceCapability Name="location" />
   </Capabilities>
 </Package>

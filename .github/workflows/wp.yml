@@ -27,7 +27,7 @@ jobs:
           $sdk = Get-ChildItem "${env:ProgramFiles(x86)}\Windows Kits\10\bin\10.*\x64" | Where-Object { Test-Path "$($_.FullName)\makeappx.exe" } | Sort-Object { [version]$_.Parent.Name } -Descending | Select-Object -First 1
           $pfx = "$env:RUNNER_TEMP\sign.pfx"
           [IO.File]::WriteAllBytes($pfx, [Convert]::FromBase64String($env:WP_PFX_BASE64))
-          $pakketten = @{ 'Toko' = 'wp\appx'; 'Galgje' = 'wp\spellen\galgje'; 'AgoraBosgevecht' = 'wp\spellen\agora'; 'ShaneDeadRedemption' = 'wp\spellen\shane'; 'SkittaLite' = 'wp\spellen\skittalite'; 'Scorroday' = 'wp\spellen\scorroday'; 'NaviKarta' = 'wp\spellen\navikarta'; 'Boodschappenlijst' = 'wp\spellen\boodschappen'; 'Muzu' = 'wp\spellen\muzu'; 'JensRunLite' = 'wp\spellen\jensrunlite'; 'AngryMo' = 'wp\spellen\angrymo'; 'Wierie' = 'wp\spellen\wierie' }
+          $pakketten = @{ 'Toko' = 'wp\appx'; 'Galgje' = 'wp\spellen\galgje'; 'AgoraBosgevecht' = 'wp\spellen\agora'; 'ShaneDeadRedemption' = 'wp\spellen\shane'; 'SkittaLite' = 'wp\spellen\skittalite'; 'Scorroday' = 'wp\spellen\scorroday'; 'NaviKarta' = 'wp\spellen\navikarta'; 'Boodschappenlijst' = 'wp\spellen\boodschappen'; 'Muzu' = 'wp\spellen\muzu'; 'JensRunLite' = 'wp\spellen\jensrunlite'; 'AngryMo' = 'wp\spellen\angrymo'; 'Woesoe' = 'wp\spellen\woesoe'; 'PuchMaxiLoesoe' = 'wp\spellen\puchmaxi' }
           foreach ($p in $pakketten.GetEnumerator()) {
             & "$($sdk.FullName)\makeappx.exe" pack /o /d $p.Value /p "$($p.Key).appx"
             if ($LASTEXITCODE) { exit 1 }
@@ -49,6 +49,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete wp-latest --yes --cleanup-tag 2>$null
-          gh release create wp-latest Toko.appx Galgje.appx AgoraBosgevecht.appx ShaneDeadRedemption.appx SkittaLite.appx Scorroday.appx NaviKarta.appx Boodschappenlijst.appx Muzu.appx JensRunLite.appx AngryMo.appx Wierie.appx wp\TimVanBergen.cer --title "Windows 10 Mobile-app" --notes "Voor Windows 10 Mobile (bijv. Lumia 435). Installeren: zet Ontwikkelaarsmodus aan, open TimVanBergen.cer en daarna Toko.appx." --latest=false
+          gh release create wp-latest Toko.appx Galgje.appx AgoraBosgevecht.appx ShaneDeadRedemption.appx SkittaLite.appx Scorroday.appx NaviKarta.appx Boodschappenlijst.appx Muzu.appx JensRunLite.appx AngryMo.appx Woesoe.appx PuchMaxiLoesoe.appx wp\TimVanBergen.cer --title "Windows 10 Mobile-app" --notes "Voor Windows 10 Mobile (bijv. Lumia 435). Installeren: zet Ontwikkelaarsmodus aan, open TimVanBergen.cer en daarna Toko.appx." --latest=false
           # GitHub maakt er soms een concept zonder tag van als de oude tag net weg is: dan geven alle downloads 404
           gh release edit wp-latest --draft=false --tag wp-latest
