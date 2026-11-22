@@ -101,6 +101,12 @@ export const APPS = [
     tekst: 'Ewa mattie! Het weer van nu, per uur en de hele week, waar je ook bent, en Woesoe vertelt het je in straattaal: kapot koud, lit buiten of natte pattas. Met tips of je een jas of paraplu mee moet. Weer van Open-Meteo.',
   },
   {
+    id: 'buckme', naam: 'BuckMe', repo: 'toko', manifest: 'wp/spellen/buckme/AppxManifest.xml', bestand: 'BuckMe.appx', pakket: 'TimvanBergen.BuckMe', protocol: 'tvb-buckme',
+    kleur: '#6a2ee8', soort: 'Spellen', site: 'https://buckme.timvanbergen.nl/',
+    kort: 'Nep-bank en casino. Alles is speelgeld.',
+    tekst: 'Een bankapp waar niks echt is: je hebt Bucks, nepgeld. Buck yourself met je dagbonus, maak Bucks over naar je matties met Bucked you, stuur een Buck me-verzoek en vergok alles in de Bucking machine of bij Buck or nothing. Bucks kun je niet kopen of uitbetalen.',
+  },
+  {
     id: 'toko', naam: 'Toko', repo: 'toko', bestand: 'Toko.appx', pakket: 'TimvanBergen.Toko', protocol: 'tvb-toko',
     kleur: '#E8590C', soort: 'Hulpmiddelen', site: 'https://toko.timvanbergen.nl/',
     kort: 'De winkel voor al onze Lumia-apps.',
