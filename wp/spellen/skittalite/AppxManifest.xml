@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Skitta Lite voor Windows 10 Mobile (hosted web app): opent https://skittalite.timvanbergen.nl/ (skitta/public/lite, ES5, draait zo in Edge 14).
      Heette eerst Belliechat: de pakketnaam blijft TimvanBergen.Belliechat, zodat een geïnstalleerde app gewoon bijwerkt.
-     WindowsRuntimeAccess="all": de app gebruikt de terugknop, de statusbalk en het toetsenbord (InputPane) van de telefoon.
+     WindowsRuntimeAccess="all": de app gebruikt de terugknop, de statusbalk, het toetsenbord (InputPane) en meldingen van de telefoon.
+     bg.js is een achtergrondtaak (elk kwartier) die meldt als er nieuwe berichten zijn; microfoon en webcam zijn voor bellen.
      Toko bouwt dit pakket (.github/workflows/wp.yml) en ziet aan Version dat er een update is; verhoog die alleen bij een nieuw pakket. -->
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
          xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          IgnorableNamespaces="uap mp">
-  <Identity Name="TimvanBergen.Belliechat" Publisher="CN=Tim van Bergen" Version="1.0.1.0" ProcessorArchitecture="neutral" />
+  <Identity Name="TimvanBergen.Belliechat" Publisher="CN=Tim van Bergen" Version="1.0.2.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="0195f29f-4822-456a-9272-cc8f7439325f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Skitta Lite</DisplayName>
@@ -34,6 +35,11 @@
         <uap:Rule Match="https://skittalite.timvanbergen.nl/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <Extensions>
+        <Extension Category="windows.backgroundTasks" StartPage="bg.js">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
         <!-- zo kan Toko de app openen -->
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="tvb-skittalite">
@@ -45,5 +51,7 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>
